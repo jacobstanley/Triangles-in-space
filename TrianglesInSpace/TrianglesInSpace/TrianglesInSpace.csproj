@@ -56,6 +56,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="QuickCheck">
+      <HintPath>..\packages\QuickCheck\QuickCheck.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickCheck.NUnit">
+      <HintPath>..\packages\QuickCheck\QuickCheck.NUnit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -96,6 +102,8 @@
     <Compile Include="Motion\Nunit\PathTests.cs" />
     <Compile Include="Motion\Path.cs" />
     <Compile Include="Primitives\Angle.cs" />
+    <Compile Include="Primitives\NUnit\Generators.cs" />
+    <Compile Include="Primitives\NUnit\VectorProperties.cs" />
     <Compile Include="Primitives\NUnit\VectorTests.cs" />
     <Compile Include="Primitives\TurnDirection.cs" />
     <Compile Include="Primitives\NUnit\AngleTests.cs" />
@@ -113,6 +121,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

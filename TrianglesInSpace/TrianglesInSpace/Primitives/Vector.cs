@@ -25,7 +25,7 @@ namespace TrianglesInSpace.Primitives
         {
             get
             {
-                return Math.Sqrt(Math.Pow(X, 2) + Math.Pow(Y, 2));
+                return Math.Sqrt(X * X + Y * Y);
 
             }
         }
@@ -33,6 +33,11 @@ namespace TrianglesInSpace.Primitives
         public Vector Normalise()
         {
             return new Vector(X/Length, Y/Length);
+        }
+
+        public static double Dot(Vector leftSide, Vector rightSide)
+        {
+            return leftSide.X * rightSide.X + leftSide.Y * rightSide.Y;
         }
 
         public static Vector operator +(Vector leftSide, Vector rightSide)
@@ -99,6 +104,11 @@ namespace TrianglesInSpace.Primitives
             {
                 return (X.GetHashCode() * 397) ^ Y.GetHashCode();
             }
+        }
+
+        public override string ToString()
+        {
+            return "X = " + X + ", Y = " + Y;
         }
     }
 }
